@@ -22,11 +22,12 @@
     <div id="app">
         <main id="site_main">
             <section id="main_button">
-                <input type="text" name="" id="" placeholder="write a new task here..." v-model="newItem" @keyup.enter="addItem()">
+                <input type="text" name="" id="" placeholder="write a new task here..." v-model.trim="newItem" @keyup.enter="addItem()" required>
                 <button class="button_1" @click="addItem()">Add Task</button>
                 <button class="button_2">Add Selection</button>
-        
+                
             </section>
+            <span class="error" v-if="error">"Make sure to insert at least 4 char."</span>
             <hr>
             <!-- /#main_button -->
         
