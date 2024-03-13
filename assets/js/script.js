@@ -8,14 +8,6 @@ createApp
                 newItem: "",
                 toDoItems:
                 [
-                    {  
-                        text:"",
-                        done:false
-                    },
-                    {
-                        text: "",
-                        done: false
-                    },
 
                 ],
                 error: false,
@@ -30,7 +22,6 @@ createApp
                 //this.toDoItems.text.unshift(this.newItem)
                 //console.log(toDoItems);
                 //console.log(this.toDoItems.entries);
-                
                 if(this.newItem.length > 3)
                 {
                     let newObject =
@@ -46,17 +37,19 @@ createApp
                 {
                     this.error = "Insert at least 4 char."
                 }
-                
-                
                 //console.log(this.toDoItems);
-
             },
             addDone()
             {
                 console.log(this.toDoItems);
+                console.log(...this.toDoItems);
+                //console.log(...this.toDoItems.done)
+                //const prova = this.toDoItems.done
+                //console.log(prova);
             }
         },
-        mounted() {
+        mounted()
+        {
             
         }
     }).mount("#app")
