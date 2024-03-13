@@ -175,3 +175,9 @@ div {
 {
     text-decoration: line-through;
 }
+
+.bin 
+{
+    padding: 0.25rem 0.5rem;
+    margin-left: 1rem;
+}

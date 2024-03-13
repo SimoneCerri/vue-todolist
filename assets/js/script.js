@@ -6,11 +6,9 @@ createApp
         {
             return {
                 newItem: "",
-                toDoItems:
-                [
-
-                ],
+                toDoItems:[],
                 error: false,
+                binItems:[],
             }
         },
         methods:
@@ -41,13 +39,19 @@ createApp
             },
             addDone(index)
             {
-                console.log(this.toDoItems);
-                console.log(...this.toDoItems);
+                //console.log(this.toDoItems);
+                //console.log(...this.toDoItems);
                 //console.log(...this.toDoItems.done)
                 //const prova = this.toDoItems.done
                 //console.log(prova);
-                console.log(this.toDoItems[index].done);
+                //console.log(this.toDoItems[index].done);
                 this.toDoItems[index].done = !this.toDoItems[index].done
+            },
+            moveToBin(index)
+            {
+                this.binItems.unshift(this.toDoItems[index])
+                //console.log(this.binItems);
+                this.toDoItems.splice(this.toDoItems[index],1)
             }
         },
         mounted()

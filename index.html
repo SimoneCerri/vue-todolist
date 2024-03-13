@@ -15,7 +15,7 @@
     <header id="site_header">
         <div class="logo">
             <!-- <img src="./assets/img/Logo.png" alt=""> -->
-            <i class="fa-solid fa-clipboard" style="color: #000000;"></i>
+            <i class="fa-solid fa-clipboard" style="color: #47ADF1"></i>
             <strong class="logo_text">
                 TO-DO LIST:
             </strong class="logo_text">
@@ -44,8 +44,9 @@
                 <ul class="task">
                     <li v-for="(item,index) in toDoItems" @click="addDone(index)">
                         <span :class="item.done ? 'done' : ''">
-                            {{item.text}} {{item.done}}
+                            {{item.text}}
                         </span>
+                        <button class="bin" @click="moveToBin(index)"><i class="fa-solid fa-trash-can" style="color: #FF0000;"></i></button>
                     </li>
                 </ul>
 
@@ -63,9 +64,15 @@
 
             <setcion id="main_upcoming">
                 <h3>&#9660 Bin</h3>
-                <div class="task">
-
-                </div>
+                <ul class="task">
+                    <li v-for="(item,index) in binItems" @click="addDone(index)">
+                        <span :class="item.done ? 'done' : ''">
+                            {{item.text}}
+                        </span>
+                        <button class="bin" @click="moveToBin(index)"><i class="fa-solid fa-trash-can"
+                                style="color: #FF0000;"></i></button>
+                    </li>
+                </ul>
             </setcion>
             <!-- /#main_upcoming -->
         </main>
