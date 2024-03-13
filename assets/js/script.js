@@ -4,7 +4,7 @@ createApp
     ({
         data() {
             return {
-                newItem: '',
+                newItem: "",
                 toDoItems:[],
                 error: false,
             }
