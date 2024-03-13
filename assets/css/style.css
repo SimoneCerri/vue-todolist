@@ -1,0 +1,151 @@
+:root {
+    --editorial: rgba(71, 173, 241, 1);
+    --goals: rgba(156, 114, 228, 1);
+    --recruiting: rgba(100, 192, 169, 1);
+    --mobile: rgba(242, 158, 51, 1);
+    --website: rgba(216, 99, 160, 1);
+    --sales: rgba(176, 201, 38, 1);
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+    --grey: rgba(246, 248, 249, 1);
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+#site_header {
+    background-color: var(--white);
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.3rem;
+}
+
+.logo_text {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    /* font-size: 2.5rem;
+    line-height: 2.5rem; */
+    vertical-align: middle;
+}
+
+.logo {
+    /*     float: left;
+    vertical-align: middle; */
+}
+
+.logo img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+hr {
+    margin: 1rem -1rem;
+    color: var(--grey);
+}
+
+#site_main {
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 1rem;
+    width: 60%;
+    margin: 0 auto;
+    /* elemento centrato */
+}
+
+.button_1 {
+    background-color: var(--editorial);
+    color: var(--white);
+    border-radius: 5px;
+    border: 1px solid var(--editorial);
+    padding: 0.4rem 0.8rem;
+}
+
+.button_2 {
+    background-color: var(--white);
+    color: var(--grey);
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    padding: 0.4rem 0.8rem;
+}
+
+.circle_green {
+    /* height: 2px;
+    width: 2px; */
+    border-radius: 50%;
+    border: 0.1rem solid lightgreen;
+    color: lightgreen;
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.3rem;
+    margin-right: 1rem;
+}
+
+.circle_red {
+    /* height: 20px;
+    width: 20px; */
+    border-radius: 50%;
+    border: 0.1rem solid red;
+    color: red;
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.3rem;
+    margin-right: 1rem;
+    /*     text-align: center;
+ */
+}
+
+.ovale_badge {
+    /* height: 20px;
+    width: 60px; */
+    font-size: 10px;
+    border-radius: 8px;
+    color: var(--white);
+    text-align: center;
+    padding: 8px;
+}
+
+.badge_editorial {
+    background-color: var(--editorial);
+}
+
+.badge_goals {
+    background-color: var(--goals)
+}
+
+.badge_recruiting {
+    background-color: var(--recruiting)
+}
+
+.badge_mobile {
+    background-color: var(--mobile)
+}
+
+.badge_website {
+    background-color: var(--website)
+}
+
+.badge_sales {
+    background-color: var(--sales)
+}
+
+#main_task {
+    padding: 2rem 0;
+}
+
+#main_today {
+    padding: 2rem 0;
+}
+
+#main_upscoming {
+    padding: 2rem 0;
+}
+
+div {
+    padding: 0.5rem;
+}
