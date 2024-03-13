@@ -2,10 +2,22 @@ let { createApp } = Vue
 
 createApp
     ({
-        data() {
+        data()
+        {
             return {
                 newItem: "",
-                toDoItems:[],
+                toDoItems:
+                [
+                    {  
+                        text:"",
+                        done:false
+                    },
+                    {
+                        text: "",
+                        done: false
+                    },
+
+                ],
                 error: false,
             }
         },
@@ -13,13 +25,13 @@ createApp
         {
             addItem()
             {
-                console.log(this.newItem.lenght);
+                //console.log(this.newItem.length);
                 //console.log(this.toDoItems);
                 //this.toDoItems.text.unshift(this.newItem)
                 //console.log(toDoItems);
                 //console.log(this.toDoItems.entries);
                 
-                if(this.newItem.lenght > 3)
+                if(this.newItem.length > 3)
                 {
                     let newObject =
                     {
@@ -32,12 +44,16 @@ createApp
                 }
                 else
                 {
-                    this.error = true
+                    this.error = "Insert at least 4 char."
                 }
                 
                 
                 //console.log(this.toDoItems);
 
+            },
+            addDone()
+            {
+                console.log(this.toDoItems);
             }
         },
         mounted() {
