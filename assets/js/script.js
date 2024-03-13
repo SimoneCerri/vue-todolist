@@ -25,7 +25,8 @@ createApp
                     let newObject =
                     {
                     text: this.newItem,
-                    done:false
+                    done:false,
+                    eliminated:false,
                     }
                     this.toDoItems.unshift(newObject)
                     this.newItem = ""
@@ -49,9 +50,13 @@ createApp
             },
             moveToBin(index)
             {
-                this.binItems.unshift(this.toDoItems[index])
+                //this.binItems.unshift(this.toDoItems[index])
                 //console.log(this.binItems);
-                this.toDoItems.splice(this.toDoItems[index],1)
+                //this.toDoItems.splice(this.toDoItems[index],1)
+                //console.log(this.binItems);
+                //console.log(this.toDoItems);
+                this.toDoItems[index].eliminated = !this.toDoItems[index].eliminated
+
             }
         },
         mounted()

@@ -65,12 +65,10 @@
             <setcion id="main_upcoming">
                 <h3>&#9660 Bin</h3>
                 <ul class="task">
-                    <li v-for="(item,index) in binItems" @click="addDone(index)">
-                        <span :class="item.done ? 'done' : ''">
+                    <li v-for="(item,index) in toDoItems" @click="addDone(index)">
+                        <span v-if="item.eliminated ? 'done' : ''">
                             {{item.text}}
                         </span>
-                        <button class="bin" @click="moveToBin(index)"><i class="fa-solid fa-trash-can"
-                                style="color: #FF0000;"></i></button>
                     </li>
                 </ul>
             </setcion>
