@@ -42,9 +42,9 @@
                 <h3>&#9660 New Task</h3>
 
                 <ul class="task">
-                    <li v-for="(item,index) in toDoItems" @click="addDone()">
-                        <span>
-                            {{item.text}}
+                    <li v-for="(item,index) in toDoItems" @click="addDone(index)">
+                        <span :class="item.done ? 'done' : ''">
+                            {{item.text}} {{item.done}}
                         </span>
                     </li>
                 </ul>
