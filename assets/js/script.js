@@ -39,13 +39,15 @@ createApp
                 }
                 //console.log(this.toDoItems);
             },
-            addDone()
+            addDone(index)
             {
                 console.log(this.toDoItems);
                 console.log(...this.toDoItems);
                 //console.log(...this.toDoItems.done)
                 //const prova = this.toDoItems.done
                 //console.log(prova);
+                console.log(this.toDoItems[index].done);
+                this.toDoItems[index].done = !this.toDoItems[index].done
             }
         },
         mounted()
